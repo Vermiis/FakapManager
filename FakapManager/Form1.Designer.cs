@@ -405,7 +405,7 @@
             this.ClientSize = new System.Drawing.Size(502, 415);
             this.Controls.Add(this.tcCheck);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "FakapManager";
             this.tcCheck.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
