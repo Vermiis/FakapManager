@@ -23,7 +23,7 @@ namespace FakapManager
         public static void DeleteValue(string SubKeyName, string valname)
         {
 
-            Console.WriteLine("1-HKEY_Current User, 2- Local machine");
+           
             var o = Convert.ToInt32(Console.ReadLine());
             switch (o)
             {
@@ -33,6 +33,7 @@ namespace FakapManager
                         {
                             if (key == null)
                             {
+                                
                                 Console.WriteLine("Wpis nie istnieje, albo podales zla sciezke (ma byc bez HKEY...)");
                             }
                             else

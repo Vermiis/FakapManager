@@ -34,5 +34,50 @@ namespace FakapManager
             Registry.SetValue(key, valname, KronosPath1.Text);
             Registry.SetValue(key, valname, KronosPath2.Text);
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            var x= cmbRoots.SelectedIndex;
+            switch (x)
+            {
+                case 1:
+                    {
+                        using (RegistryKey key = Registry.CurrentUser.OpenSubKey(txtbSubKey.Text, true))
+                        {
+                            if (key == null)
+                            {
+                                lblResult.Text = "Wpis nie istnieje, albo podales zla sciezke";
+                                
+                            }
+                            else
+                            {
+                                key.DeleteValue(txtbValName.Text);
+                            }
+                        }
+
+
+                    }
+                    break;
+                case 2:
+                    {
+                        using (RegistryKey key = Registry.LocalMachine.OpenSubKey(txtbSubKey.Text, true))
+                        {
+                            if (key == null)
+                            {
+                                lblResult.Text = "Wpis nie istnieje, albo podales zla sciezke";
+                            }
+                            else
+                            {
+                                key.DeleteValue(txtbValName.Text);
+                            }
+                        }
+
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+        }
     }
 }

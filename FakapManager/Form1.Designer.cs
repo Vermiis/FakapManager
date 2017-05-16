@@ -53,10 +53,19 @@
             this.lblDir1 = new System.Windows.Forms.Label();
             this.lblDBName = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.txtbValName = new System.Windows.Forms.TextBox();
+            this.txtbSubKey = new System.Windows.Forms.TextBox();
+            this.cmbRoots = new System.Windows.Forms.ComboBox();
+            this.lblResult = new System.Windows.Forms.Label();
             this.tcCheck.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcCheck
@@ -92,9 +101,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 122);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(33, 13);
             this.label4.TabIndex = 5;
-            this.label4.Text = "label4";
+            this.label4.Text = "Klucz";
             // 
             // txtbRegEntry
             // 
@@ -106,9 +115,10 @@
             // lblKeyValue
             // 
             this.lblKeyValue.AutoSize = true;
+            this.lblKeyValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lblKeyValue.Location = new System.Drawing.Point(4, 271);
             this.lblKeyValue.Name = "lblKeyValue";
-            this.lblKeyValue.Size = new System.Drawing.Size(25, 13);
+            this.lblKeyValue.Size = new System.Drawing.Size(39, 20);
             this.lblKeyValue.TabIndex = 3;
             this.lblKeyValue.Text = "Null";
             // 
@@ -289,6 +299,14 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.lblResult);
+            this.tabPage4.Controls.Add(this.label8);
+            this.tabPage4.Controls.Add(this.label6);
+            this.tabPage4.Controls.Add(this.label5);
+            this.tabPage4.Controls.Add(this.btnDelete);
+            this.tabPage4.Controls.Add(this.txtbValName);
+            this.tabPage4.Controls.Add(this.txtbSubKey);
+            this.tabPage4.Controls.Add(this.cmbRoots);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -296,6 +314,76 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(157, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 13);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Registry Key";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 124);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "KeyValue";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Root:";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(364, 176);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(87, 23);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Delete Value";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // txtbValName
+            // 
+            this.txtbValName.Location = new System.Drawing.Point(160, 121);
+            this.txtbValName.Name = "txtbValName";
+            this.txtbValName.Size = new System.Drawing.Size(121, 20);
+            this.txtbValName.TabIndex = 2;
+            // 
+            // txtbSubKey
+            // 
+            this.txtbSubKey.Location = new System.Drawing.Point(160, 59);
+            this.txtbSubKey.Name = "txtbSubKey";
+            this.txtbSubKey.Size = new System.Drawing.Size(291, 20);
+            this.txtbSubKey.TabIndex = 1;
+            // 
+            // cmbRoots
+            // 
+            this.cmbRoots.FormattingEnabled = true;
+            this.cmbRoots.Items.AddRange(new object[] {
+            "Current User",
+            "Local Machine"});
+            this.cmbRoots.Location = new System.Drawing.Point(22, 58);
+            this.cmbRoots.Name = "cmbRoots";
+            this.cmbRoots.Size = new System.Drawing.Size(121, 21);
+            this.cmbRoots.TabIndex = 0;
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(22, 233);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(10, 13);
+            this.lblResult.TabIndex = 7;
+            this.lblResult.Text = "-";
             // 
             // Form1
             // 
@@ -312,6 +400,8 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -343,6 +433,14 @@
         private System.Windows.Forms.TextBox KronosPath2;
         private System.Windows.Forms.TextBox KronosPath1;
         private System.Windows.Forms.TextBox KronosDBName;
+        private System.Windows.Forms.ComboBox cmbRoots;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.TextBox txtbValName;
+        private System.Windows.Forms.TextBox txtbSubKey;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblResult;
     }
 }
 
