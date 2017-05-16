@@ -79,5 +79,10 @@ namespace FakapManager
             }
 
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Registry.SetValue(txtBoxKey.Text, txtbValueName.Text, txtValueUpdate.Text);
+        }
     }
 }
