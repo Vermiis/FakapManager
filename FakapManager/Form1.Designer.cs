@@ -53,6 +53,8 @@
             this.lblDir1 = new System.Windows.Forms.Label();
             this.lblDBName = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,7 +62,6 @@
             this.txtbValName = new System.Windows.Forms.TextBox();
             this.txtbSubKey = new System.Windows.Forms.TextBox();
             this.cmbRoots = new System.Windows.Forms.ComboBox();
-            this.lblResult = new System.Windows.Forms.Label();
             this.tcCheck.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -300,6 +301,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label9);
             this.tabPage4.Controls.Add(this.lblResult);
             this.tabPage4.Controls.Add(this.label8);
             this.tabPage4.Controls.Add(this.label6);
@@ -316,14 +318,32 @@
             this.tabPage4.Text = "DeleteValue";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(19, 307);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(336, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "To MUSI być Subkey inaczej pokaże, że brak wpisu, mimo, że istnieje";
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(22, 233);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(10, 13);
+            this.lblResult.TabIndex = 7;
+            this.lblResult.Text = "-";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(157, 23);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 13);
+            this.label8.Size = new System.Drawing.Size(91, 13);
             this.label8.TabIndex = 6;
-            this.label8.Text = "Registry Key";
+            this.label8.Text = "Registry SUB Key";
             // 
             // label6
             // 
@@ -351,6 +371,7 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete Value";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtbValName
             // 
@@ -376,15 +397,6 @@
             this.cmbRoots.Name = "cmbRoots";
             this.cmbRoots.Size = new System.Drawing.Size(121, 21);
             this.cmbRoots.TabIndex = 0;
-            // 
-            // lblResult
-            // 
-            this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(22, 233);
-            this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(10, 13);
-            this.lblResult.TabIndex = 7;
-            this.lblResult.Text = "-";
             // 
             // Form1
             // 
@@ -442,6 +454,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Label label9;
     }
 }
 

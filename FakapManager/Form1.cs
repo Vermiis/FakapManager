@@ -35,19 +35,26 @@ namespace FakapManager
             Registry.SetValue(key, valname, KronosPath2.Text);
         }
 
+      
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Registry.SetValue(txtBoxKey.Text, txtbValueName.Text, txtValueUpdate.Text);
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var x= cmbRoots.SelectedIndex;
+            var x = cmbRoots.SelectedIndex;
             switch (x)
             {
-                case 1:
+                case 0:
                     {
                         using (RegistryKey key = Registry.CurrentUser.OpenSubKey(txtbSubKey.Text, true))
                         {
                             if (key == null)
                             {
                                 lblResult.Text = "Wpis nie istnieje, albo podales zla sciezke";
-                                
+
                             }
                             else
                             {
@@ -58,7 +65,7 @@ namespace FakapManager
 
                     }
                     break;
-                case 2:
+                case 1:
                     {
                         using (RegistryKey key = Registry.LocalMachine.OpenSubKey(txtbSubKey.Text, true))
                         {
@@ -78,11 +85,6 @@ namespace FakapManager
                     break;
             }
 
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            Registry.SetValue(txtBoxKey.Text, txtbValueName.Text, txtValueUpdate.Text);
         }
     }
 }
