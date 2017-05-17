@@ -27,12 +27,12 @@ namespace FakapManager
 
         private void btnKronosSet_Click(object sender, EventArgs e)
         {
-            string key = "";
-            string valname = "";
+            string key = @"HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Next!\Kronos NET\General";
             
-            Registry.SetValue(key, valname, KronosDBName.Text);
-            Registry.SetValue(key, valname, KronosPath1.Text);
-            Registry.SetValue(key, valname, KronosPath2.Text);
+            
+            Registry.SetValue(key, "DataBaseName", KronosDBName.Text);
+            Registry.SetValue(key, "Path", KronosPath1.Text);
+            Registry.SetValue(key, "PathData", KronosPath2.Text);
         }
 
       
