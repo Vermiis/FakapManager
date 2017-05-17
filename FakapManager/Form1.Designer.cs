@@ -257,6 +257,7 @@
             this.KronosPath2.Name = "KronosPath2";
             this.KronosPath2.Size = new System.Drawing.Size(215, 20);
             this.KronosPath2.TabIndex = 6;
+            this.KronosPath2.Text = "C:\\KronosNET3\\";
             // 
             // KronosPath1
             // 
@@ -264,6 +265,7 @@
             this.KronosPath1.Name = "KronosPath1";
             this.KronosPath1.Size = new System.Drawing.Size(215, 20);
             this.KronosPath1.TabIndex = 5;
+            this.KronosPath1.Text = "C:\\KronosNET3\\";
             // 
             // KronosDBName
             // 
@@ -271,24 +273,25 @@
             this.KronosDBName.Name = "KronosDBName";
             this.KronosDBName.Size = new System.Drawing.Size(215, 20);
             this.KronosDBName.TabIndex = 4;
+            this.KronosDBName.Text = "KronosNET30";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(23, 194);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 13);
+            this.label7.Size = new System.Drawing.Size(93, 13);
             this.label7.TabIndex = 3;
-            this.label7.Text = "Ścieżka v 2";
+            this.label7.Text = "Ścieżka PathData";
             // 
             // lblDir1
             // 
             this.lblDir1.AutoSize = true;
             this.lblDir1.Location = new System.Drawing.Point(23, 114);
             this.lblDir1.Name = "lblDir1";
-            this.lblDir1.Size = new System.Drawing.Size(101, 13);
+            this.lblDir1.Size = new System.Drawing.Size(129, 13);
             this.lblDir1.TabIndex = 2;
-            this.lblDir1.Text = "Ścieżka do kronosa";
+            this.lblDir1.Text = "Ścieżka do kronosa(Path)";
             // 
             // lblDBName
             // 
