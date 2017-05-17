@@ -62,6 +62,7 @@
             this.txtbValName = new System.Windows.Forms.TextBox();
             this.txtbSubKey = new System.Windows.Forms.TextBox();
             this.cmbRoots = new System.Windows.Forms.ComboBox();
+            this.lblKronosErr = new System.Windows.Forms.Label();
             this.tcCheck.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -226,6 +227,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.lblKronosErr);
             this.tabPage3.Controls.Add(this.btnKronosSet);
             this.tabPage3.Controls.Add(this.KronosPath2);
             this.tabPage3.Controls.Add(this.KronosPath1);
@@ -401,6 +403,15 @@
             this.cmbRoots.Size = new System.Drawing.Size(121, 21);
             this.cmbRoots.TabIndex = 0;
             // 
+            // lblKronosErr
+            // 
+            this.lblKronosErr.AutoSize = true;
+            this.lblKronosErr.Location = new System.Drawing.Point(26, 293);
+            this.lblKronosErr.Name = "lblKronosErr";
+            this.lblKronosErr.Size = new System.Drawing.Size(10, 13);
+            this.lblKronosErr.TabIndex = 8;
+            this.lblKronosErr.Text = "-";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,6 +469,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblKronosErr;
     }
 }
 

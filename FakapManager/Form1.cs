@@ -28,11 +28,16 @@ namespace FakapManager
         private void btnKronosSet_Click(object sender, EventArgs e)
         {
             string key = @"HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Next!\Kronos NET\General";
-            
-            
-            Registry.SetValue(key, "DataBaseName", KronosDBName.Text);
-            Registry.SetValue(key, "Path", KronosPath1.Text);
-            Registry.SetValue(key, "PathData", KronosPath2.Text);
+
+            if (KronosDBName.TextLength != 0 && KronosPath1.TextLength != 0 && KronosPath2.TextLength != 0)
+            {
+                Registry.SetValue(key, "DataBaseName", KronosDBName.Text);
+                Registry.SetValue(key, "Path", KronosPath1.Text);
+                Registry.SetValue(key, "PathData", KronosPath2.Text);
+            }
+            else
+                lblKronosErr.Text = "Niepoprawne wpisy";
+           
         }
 
       
