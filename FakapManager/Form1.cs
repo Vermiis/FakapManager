@@ -44,7 +44,16 @@ namespace FakapManager
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Registry.SetValue(txtBoxKey.Text, txtbValueName.Text, txtValueUpdate.Text);
+            try
+            {
+                Registry.SetValue(txtBoxKey.Text, txtbValueName.Text, txtValueUpdate.Text);
+            }
+            catch (Exception ext)
+            {
+
+                throw;
+            }
+            
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -63,7 +72,16 @@ namespace FakapManager
                             }
                             else
                             {
-                                key.DeleteValue(txtbValName.Text);
+                                try
+                                {
+                                    key.DeleteValue(txtbValName.Text);
+                                }
+                                catch (Exception exc)
+                                {
+
+                                    lblResult.Text=exc.Message;
+                                }
+                                
                             }
                         }
 
