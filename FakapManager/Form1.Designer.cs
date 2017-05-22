@@ -45,6 +45,7 @@
             this.txtBoxKey = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblKronosErr = new System.Windows.Forms.Label();
             this.btnKronosSet = new System.Windows.Forms.Button();
             this.KronosPath2 = new System.Windows.Forms.TextBox();
             this.KronosPath1 = new System.Windows.Forms.TextBox();
@@ -62,7 +63,7 @@
             this.txtbValName = new System.Windows.Forms.TextBox();
             this.txtbSubKey = new System.Windows.Forms.TextBox();
             this.cmbRoots = new System.Windows.Forms.ComboBox();
-            this.lblKronosErr = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tcCheck.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -84,6 +85,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.txtbRegEntry);
             this.tabPage1.Controls.Add(this.lblKeyValue);
@@ -111,7 +113,7 @@
             // 
             this.txtbRegEntry.Location = new System.Drawing.Point(9, 154);
             this.txtbRegEntry.Name = "txtbRegEntry";
-            this.txtbRegEntry.Size = new System.Drawing.Size(100, 20);
+            this.txtbRegEntry.Size = new System.Drawing.Size(183, 20);
             this.txtbRegEntry.TabIndex = 4;
             // 
             // lblKeyValue
@@ -164,7 +166,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(469, 373);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "UpdateValue";
+            this.tabPage2.Text = "UpdateInsertValue";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // label3
@@ -203,9 +205,9 @@
             // 
             this.btnUpdate.Location = new System.Drawing.Point(302, 140);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(103, 23);
             this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Text = "Update/Create";
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -242,6 +244,15 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "KRONOS";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lblKronosErr
+            // 
+            this.lblKronosErr.AutoSize = true;
+            this.lblKronosErr.Location = new System.Drawing.Point(26, 293);
+            this.lblKronosErr.Name = "lblKronosErr";
+            this.lblKronosErr.Size = new System.Drawing.Size(10, 13);
+            this.lblKronosErr.TabIndex = 8;
+            this.lblKronosErr.Text = "-";
             // 
             // btnKronosSet
             // 
@@ -403,14 +414,13 @@
             this.cmbRoots.Size = new System.Drawing.Size(121, 21);
             this.cmbRoots.TabIndex = 0;
             // 
-            // lblKronosErr
+            // comboBox1
             // 
-            this.lblKronosErr.AutoSize = true;
-            this.lblKronosErr.Location = new System.Drawing.Point(26, 293);
-            this.lblKronosErr.Name = "lblKronosErr";
-            this.lblKronosErr.Size = new System.Drawing.Size(10, 13);
-            this.lblKronosErr.TabIndex = 8;
-            this.lblKronosErr.Text = "-";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(9, 195);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 6;
             // 
             // Form1
             // 
@@ -470,6 +480,7 @@
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblKronosErr;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

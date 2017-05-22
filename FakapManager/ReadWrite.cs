@@ -13,6 +13,7 @@ namespace FakapManager
         {
             return Registry.GetValue(key, valname, "NotFound").ToString();
             
+            
         }
 
         public static void ChangeValue(string key, string valname, string val)
