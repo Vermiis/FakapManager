@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Win32;
+using System.Security;
+using System.IO;
 
 namespace FakapManager
 {
@@ -11,7 +13,29 @@ namespace FakapManager
     {
         public static string ShowValue(string key, string valname)
         {
-            return Registry.GetValue(key, valname, "NotFound").ToString();
+            try
+            {
+                return Registry.GetValue(key, valname, "NotFound").ToString();
+            }
+            catch (SecurityException)
+            {
+                return "No permissions";
+            }
+            catch(IOException)
+            {
+                return "Error";
+            }
+            catch (ArgumentException)
+            {
+
+                return "Argument";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+            
+            
             
             
         }
